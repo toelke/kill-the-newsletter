@@ -158,6 +158,20 @@ To update, just download and extract a newer [release](https://github.com/leafac
 [the server] # systemctl restart kill-the-newsletter
 ```
 
+#### Run in docker
+
+You can build Kill the Newsletter! as docker image like so:
+
+```
+docker build -t kill-the-newsletter .
+```
+
+When running, you can mount the configuration from outside:
+
+```
+docker run -d --name kill-the-newsletter -p 8080:80 -v /path/to/your/configuration:/cfg kill-the-newsletter
+```
+
 ### Advanced
 
 #### Other Operating Systems
