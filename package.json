@@ -45,7 +45,7 @@
     "@types/node": "^14.14.33",
     "@types/nodemailer": "^6.4.0",
     "@types/smtp-server": "^3.5.6",
-    "caxa": "^1.0.0",
+    "caxa": "^2.0.0",
     "got": "^11.8.2",
     "jest": "^27.1.0",
     "node-dev": "^7.0.0",

@@ -2,7 +2,7 @@ FROM node:16-buster AS builder
 
 COPY . /src
 WORKDIR /src
-RUN npm ci && npx caxa --directory . --command "{{caxa}}/node_modules/.bin/node" "{{caxa}}/distribution/index.js" --output "kill-the-newsletter"
+RUN npm ci && npx caxa --input .  --output "kill-the-newsletter" -- "{{caxa}}/node_modules/.bin/node" "{{caxa}}/distribution/index.js"
 
 FROM gcr.io/distroless/cc-debian11 AS runner
 
