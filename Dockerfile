@@ -1,9 +1,8 @@
-FROM node:19-bullseye AS builder
+FROM node:18-bullseye AS builder
 
 COPY . /src
 WORKDIR /src
-RUN npm ci && npm run prepare && npx caxa --input .  --output "kill-the-newsletter" -- "{{caxa}}/node_modules/.bin/node" "{{caxa}}/build/server/index.mjs"
-RUN find build && exit 1
+RUN npm ci && npx caxa --input .  --output "kill-the-newsletter" -- "{{caxa}}/node_modules/.bin/node" "{{caxa}}/build/server/index.mjs"
 
 FROM gcr.io/distroless/cc-debian11 AS runner
 

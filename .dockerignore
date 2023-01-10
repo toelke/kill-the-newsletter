@@ -1,4 +1,6 @@
 Dockerfile
-node_modules
-.git
-README.md
+node_modules/
+server/node_modules/
+static/node_modules/
+build/
+.git/
